@@ -66,16 +66,16 @@ npm run build           # Run webpack
 
 ## Полезные ссылки
 
-| Ссылка                                                                          | Описание                              |
-|---------------------------------------------------------------------------------|---------------------------------------|
-| https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html | Документация JConsole                 |
-| https://visualvm.github.io/gettingstarted.html                                  | Документация VisualVM                 |
-| https://habr.com/ru/companies/timeweb/articles/719434/                          | Анализ дампа кучи Java                |
-| https://habr.com/ru/companies/zabbix/articles/342226/ (первая половина)         | Кратко про мониторинг в Java          |
-| https://habr.com/ru/articles/147008/                                            | Гайд по запуску JConsole и VisualVM   |
-| https://www.baeldung.com/visualvm-jmx-remote                                    | Конфигурация и использование VisualVM |
-| https://github.com/alex-grandson/edu/blob/main/MISPI/lab4.md                    | Популярные вопросы по ЛР4             |
-| https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab4-part1       | Пример ЛР4                            |
+| Ссылка                                                                                                               | Описание                              |
+|----------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| [docs.oracle.com/.../jconsole.html](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html) | Документация JConsole                 |
+| https://visualvm.github.io/gettingstarted.html                                                                       | Документация VisualVM                 |
+| https://habr.com/ru/companies/timeweb/articles/719434/                                                               | Анализ дампа кучи Java                |
+| https://habr.com/ru/companies/zabbix/articles/342226/                                                                | Кратко про мониторинг в Java          |
+| https://habr.com/ru/articles/147008/                                                                                 | Гайд по запуску JConsole и VisualVM   |
+| https://www.baeldung.com/visualvm-jmx-remote                                                                         | Конфигурация и использование VisualVM |
+| https://github.com/alex-grandson/edu/blob/main/MISPI/lab4.md                                                         | Популярные вопросы по ЛР4             |
+| [VeraKasianenko/Fundamentals_of_SE/lab4](https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab4-part1)  | Пример ЛР4                            |
 
 ## Лицензия <a name="license"></a>
 
