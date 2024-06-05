@@ -86,7 +86,7 @@ npm run build           # Run webpack
 | https://www.baeldung.com/visualvm-jmx-remote                                                                         | Конфигурация и использование VisualVM |
 | https://github.com/alex-grandson/edu/blob/main/MISPI/lab4.md                                                         | Популярные вопросы по ЛР4             |
 | [VeraKasianenko/Fundamentals_of_SE/lab4](https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab4-part1)  | Пример ЛР4                            |
-| Здесь могла бы быть ссылка, но Интернет не смогу мне помочь | Удаленное подключение JConsole к Helios'у |
+| Здесь могла бы быть ссылка, но Интернет не смог мне помочь | Удаленное подключение JConsole к Helios'у |
 
 ## Лицензия <a name="license"></a>
 
