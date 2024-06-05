@@ -1,5 +1,10 @@
 package web.repositories;
 
+import jakarta.enterprise.context.Destroyed;
+import jakarta.enterprise.context.Initialized;
+import jakarta.enterprise.event.Observes;
+import web.beans.AttemptStats;
+import web.beans.HitRatio;
 import web.models.Attempt;
 import web.services.*;
 
@@ -11,8 +16,11 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import com.google.gson.Gson;
 import jakarta.transaction.Transactional;
+import web.utils.MBeanRegistry;
 
+import javax.management.*;
 import java.io.*;
+import java.lang.management.ManagementFactory;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -23,12 +31,25 @@ import java.util.stream.Collectors;
 public class AttemptRepository implements Serializable {
   private static final int LATEST_ATTEMPTS_COUNT = 10;
 
+  private final AttemptStats statsMBean = new AttemptStats();
+  private final HitRatio hitRatioMBean = new HitRatio();
+
   @PersistenceContext
   private EntityManager entityManager;
 
   @Inject
   @AreaCheckQualifier
   private AreaCheck areaCheck;
+
+  public void init(@Observes @Initialized(SessionScoped.class) Object unused) {
+    MBeanRegistry.registerBean(statsMBean, "attemptStats");
+    MBeanRegistry.registerBean(hitRatioMBean, "hitRatio");
+  }
+
+  public void destroy(@Observes @Destroyed(SessionScoped.class) Object unused) {
+    MBeanRegistry.unregisterBean(statsMBean);
+    MBeanRegistry.unregisterBean(hitRatioMBean);
+  }
 
   public List<Attempt> getAttemptsList(int start, int count) {
     return entityManager.createQuery("select attempt from Attempt attempt", Attempt.class)
@@ -47,6 +68,8 @@ public class AttemptRepository implements Serializable {
     areaCheck.checkHit(attempt);
     entityManager.merge(attempt);
     entityManager.flush();
+    statsMBean.updateAttempt(attempt.isResult());
+    hitRatioMBean.updateStats(attempt.isResult());
     return attempt;
   }
 
