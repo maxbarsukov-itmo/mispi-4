@@ -10,6 +10,14 @@
 |-|-|
 | [report](./docs/report.pdf) | [report](./docs/report.docx) |
 
+> [!TIP]
+> На решение некоторых проблем в этой лабораторной работе я потратил непозволительно много времени, и не хочу, чтобы вы потратили еще столько же.
+> 
+> Поэтому я написал пару небольших гайдиков с советами, которые помогли мне запустить эту лабу, и, надеюсь, помогут и вам.
+> 
+> * Вы можете найти руководство по удаленному подключению _JConsole_ и _VisualVM_ к WildFly на **Helios**'е в [HELIOS_GUIDE.md](./HELIOS_GUIDE.md).
+> * Вы можете найти руководство по сборке и запуску **HttpUnit** (а также небольшие советы) в [HTTP_UNIT_GUIDE.md](./HTTP_UNIT_GUIDE.md).
+
 ---
 
 ## Задание
@@ -64,6 +72,8 @@ npm run build           # Run webpack
 
 После чего задеплоить `build/libs/mispi-4-1.0-SNAPSHOT.war` в WildFly.
 
+В случае возникновения трудностей с Helios'ом или сборкой HttpUnit, прочитай [HELIOS_GUIDE](./HELIOS_GUIDE.md) и [HTTP_UNIT_GUIDE](./HTTP_UNIT_GUIDE.md).
+
 ## Полезные ссылки
 
 | Ссылка                                                                                                               | Описание                              |
@@ -76,6 +86,7 @@ npm run build           # Run webpack
 | https://www.baeldung.com/visualvm-jmx-remote                                                                         | Конфигурация и использование VisualVM |
 | https://github.com/alex-grandson/edu/blob/main/MISPI/lab4.md                                                         | Популярные вопросы по ЛР4             |
 | [VeraKasianenko/Fundamentals_of_SE/lab4](https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab4-part1)  | Пример ЛР4                            |
+| Здесь могла бы быть ссылка, но Интернет не смогу мне помочь | Удаленное подключение JConsole к Helios'у |
 
 ## Лицензия <a name="license"></a>
 
