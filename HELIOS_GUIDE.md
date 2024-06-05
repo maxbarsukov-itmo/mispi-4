@@ -1,6 +1,6 @@
 # Как запустить 4 лабу по ОПИ на Helios, не привлекая внимания санитаров?
 
-<img alt="anime-angry.gif" src="./.resources/anime-angry.gif" height="200">
+<img alt="anime-angry.gif" src="./.resources/anime-angry.gif" height="290">
 
 > Пока что единственный известный способ
 
@@ -20,7 +20,7 @@
 1. Скачиваем на гелиос чистый **WildFly** и распаковываем.
 2. Меняем дефолтные порты на незанятые в `$JBOSS_HOME/standalone/configuration/standalone.xml`.
 
-> Примерно `509` строка, ищите   
+> Примерно `509` строка, ищите
 
  ```xml
 <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
@@ -40,11 +40,11 @@ export _JAVA_OPTIONS='-XX:MaxHeapSize=1G -XX:MaxMetaspaceSize=512m'
 ./bin/add_user.sh
 # Выбираем Management User
 # Юзернейм, пароль - любые
-# Группа - пустая 
+# Группа - пустая
 ```
 
 6. Запускаем:
-   
+
 * Если интересует только **JConsole**, можно запускать так: `./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0`.
 
 * Если нужно подключать еще и **VisualVM**, требуется изменить настройки _JMX_:
@@ -90,9 +90,9 @@ jconsole -J-Djava.class.path=%путь_до_%jboss-client.jar
 service:jmx:remote+http://0.0.0.0:PORT
 ```
 
-5. Вводим имя пользователя и пароль которые создали во время исполнения на `./bin/add_user.sh` на Helios.
+5. Вводим имя пользователя и пароль, которые создали во время исполнения на `./bin/add_user.sh` на **Helios**.
 
-6. Нажимаем `Connect` и молимся чтобы подключилось!
+6. Нажимаем `Connect` и молимся, чтобы подключилось!
 
 ### VisualVM
 
@@ -100,8 +100,8 @@ service:jmx:remote+http://0.0.0.0:PORT
 2. Запускаем **VisualVM**.
 3. Подключаемся удаленно **не (!) через Remote в дереве слева**, а через `File > Add JMX Connection`.
 4. В `Connection:` вводим `service:jmx:remote+http://0.0.0.0:PORT` где (`PORT` - это **management** порт), ставим флаги `Use security credentials`, `Save security credentials` и `Do not require SSL connection`.
-5. Вводим имя пользователя и пароль которые создали во время исполнения на `./bin/add_user.sh` на Helios.
-6. Нажимаем `OK` и молимся чтобы подключилось!
+5. Вводим имя пользователя и пароль, которые создали во время исполнения на `./bin/add_user.sh` на **Helios**.
+6. Нажимаем `OK` и молимся, чтобы подключилось!
 
 ---
 

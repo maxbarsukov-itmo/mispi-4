@@ -28,12 +28,12 @@ rebel.xml
 .Trashes
 
 # NetBeans
-nbproject/
-nbbuild/
+# nbproject/
+# nbbuild/
 dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
+# nbdist/
+# nbactions.xml
+# nb-configuration.xml
 
 # IDEA
 *.iml
