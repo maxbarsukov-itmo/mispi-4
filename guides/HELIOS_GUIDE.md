@@ -1,6 +1,6 @@
 # Как запустить 4 лабу по ОПИ на Helios, не привлекая внимания санитаров?
 
-<img alt="anime-angry.gif" src="./.resources/anime-angry.gif" height="290">
+<img alt="anime-angry.gif" src="../.resources/anime-angry.gif" height="290">
 
 > Пока что единственный известный способ
 
@@ -20,7 +20,7 @@
 1. Скачиваем на гелиос чистый **WildFly** и распаковываем.
 2. Меняем дефолтные порты на незанятые в `$JBOSS_HOME/standalone/configuration/standalone.xml`.
 
-> Примерно `509` строка, ищите
+> Примерно `509`-ая строка, ищите
 
  ```xml
 <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">

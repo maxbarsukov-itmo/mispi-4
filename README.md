@@ -15,8 +15,9 @@
 > 
 > Поэтому я написал пару небольших гайдиков с советами, которые помогли мне запустить эту лабу, и, надеюсь, помогут и вам.
 > 
-> * Вы можете найти руководство по удаленному подключению _JConsole_ и _VisualVM_ к WildFly на **Helios**'е в [HELIOS_GUIDE.md](./HELIOS_GUIDE.md).
-> * Вы можете найти руководство по сборке и запуску **HttpUnit** (а также небольшие советы) в [HTTP_UNIT_GUIDE.md](./HTTP_UNIT_GUIDE.md).
+> * Руководство по удаленному подключению _JConsole_ и _VisualVM_ к WildFly на **Helios**'е в [HELIOS_GUIDE.md](./guides/HELIOS_GUIDE.md).
+> * Руководство по сборке и запуску **HttpUnit** (а также небольшие советы) в [HTTP_UNIT_GUIDE.md](./guides/HTTP_UNIT_GUIDE.md).
+> * Кратко про **JFR** в [JFR_GUIDE.md](./guides/JFR_GUIDE.md).
 
 ---
 
@@ -72,7 +73,7 @@ npm run build           # Run webpack
 
 После чего задеплоить `build/libs/mispi-4-1.0-SNAPSHOT.war` в WildFly.
 
-В случае возникновения трудностей с Helios'ом или сборкой HttpUnit, прочитай [HELIOS_GUIDE](./HELIOS_GUIDE.md) и [HTTP_UNIT_GUIDE](./HTTP_UNIT_GUIDE.md).
+В случае возникновения трудностей с Helios'ом или сборкой HttpUnit, прочитай [HELIOS_GUIDE](./guides/HELIOS_GUIDE.md) и [HTTP_UNIT_GUIDE](./guides/HTTP_UNIT_GUIDE.md).
 
 ## Полезные ссылки
 
@@ -86,7 +87,25 @@ npm run build           # Run webpack
 | https://www.baeldung.com/visualvm-jmx-remote                                                                         | Конфигурация и использование VisualVM |
 | https://github.com/alex-grandson/edu/blob/main/MISPI/lab4.md                                                         | Популярные вопросы по ЛР4             |
 | [VeraKasianenko/Fundamentals_of_SE/lab4](https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab4-part1)  | Пример ЛР4                            |
-| Здесь могла бы быть ссылка, но Интернет не смог мне помочь | Удаленное подключение JConsole к Helios'у |
+
+### Полезные материалы по JMX и прочему для сдачи теории:
+
+При сдаче последнего задания лабораторной работы вам также могут понадобиться:
+- [**Eclipse MAT**](https://eclipse.dev/mat/) -- [гайд](https://habr.com/ru/articles/519830/);
+- [**Java Flight Recorder**](https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm) (JFR) -- [гайд](https://habr.com/ru/companies/krista/articles/532632/).
+
+
+| № | Ссылка | Описание |
+| --- | --- | --- |
+| 1. | https://docs.oracle.com/en/java/javase/21/jmx/jmx-technology-architecture.html | JMX Technology Architecture |
+| 2 | https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/package-summary.html | Docs for `javax.management` |
+| 3 | https://en.wikipedia.org/wiki/Java_Management_Extensions#Managed_beans | Wiki MBeans |
+| 4 | https://docs.oracle.com/javase/tutorial/jmx/remote/custom.html | Creating a Custom JMX Client |
+| 5 | https://stackoverflow.com/questions/59696935/how-to-connect-to-jmx-for-jvm-on-local-machine-by-pid-java-9 | How to connect to JMX for JVM on local machine by PID |
+| 6 | https://docs.oracle.com/cd/E19206-01/816-4178/6madjde4b/index.html | Instrumentation Using MBeans |
+| 7 | https://docs.oracle.com/cd/E21764_01/web.1111/e13729/understanding.htm#JMXPG114 | Understanding JMX |
+| 8 | https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/real-time-jmx-monitoring.html | JDK Mission Control User Guide: Real-time JMX Monitoring |
+| 9 | https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/profiler.html | VisualVM Profiling |
 
 ## Лицензия <a name="license"></a>
 
