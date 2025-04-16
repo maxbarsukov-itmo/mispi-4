@@ -98,10 +98,11 @@ service:jmx:remote+http://0.0.0.0:PORT
 
 1. Установить **VisualVM** (проще всего это делать через [sdkman.io](https://sdkman.io/), но можно и скачать с [их сайта](https://visualvm.github.io/download.html)).
 2. Запускаем **VisualVM**.
-3. Подключаемся удаленно **не (!) через Remote в дереве слева**, а через `File > Add JMX Connection`.
-4. В `Connection:` вводим `service:jmx:remote+http://0.0.0.0:PORT` где (`PORT` - это **management** порт), ставим флаги `Use security credentials`, `Save security credentials` и `Do not require SSL connection`.
-5. Вводим имя пользователя и пароль, которые создали во время исполнения на `./bin/add_user.sh` на **Helios**.
-6. Нажимаем `OK` и молимся, чтобы подключилось!
+3. Устанавливаем плагин `VisualVM-MBeans` в `Tools > Plugins` (для графика изменения показаний MBean-классов).
+4. Подключаемся удаленно **не (!) через Remote в дереве слева**, а через `File > Add JMX Connection`.
+5. В `Connection:` вводим `service:jmx:remote+http://0.0.0.0:PORT` где (`PORT` - это **management** порт), ставим флаги `Use security credentials`, `Save security credentials` и `Do not require SSL connection`.
+6. Вводим имя пользователя и пароль, которые создали во время исполнения на `./bin/add_user.sh` на **Helios**.
+7. Нажимаем `OK` и молимся, чтобы подключилось!
 
 ---
 
